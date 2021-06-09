@@ -1,0 +1,48 @@
+.mat-tab-labels {
+    justify-content: center;
+}
+
+mat-card-title {
+    //font-size: 72px;
+   // background: linear-gradient(to right,yellow, green);
+   // -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+
+  mat-card {
+    max-width: 200px;
+    margin: 2em auto;
+    height: fit-content;
+    margin-top: 10px;
+    display: block;
+  }
+
+  .mat-card-image{
+      margin-left: -15px;
+      margin-right: -20px;
+  }
+
+  .c-text{
+      font-weight: 500;
+      font-size: 16px;
+  }
+
+  .edit-btn {
+      background-color: rgb(201, 34, 98);
+      color: #fff;
+  }
+
+  .detail-container {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .mat-tab-body-content {
+    height: 100%;
+    /* overflow: auto; */
+    display: block !important;
+    width: auto;
+    margin: 10px;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }

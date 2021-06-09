@@ -1,0 +1,38 @@
+<div class="detail-container">
+    <div class="example-container mat-elevation-z8"><br>
+        <h2 style="font-weight: 600;text-align: center;font-size: 24px;">
+            {{tourDetails.description}}
+        </h2>
+        <img src="{{getImage(tourDetails.courseListIcon)}}" class="mat-card-image" width="100%" alt="user avatar">
+          
+
+    </div>
+    <mat-form-field class="row" style="max-width: 88vw;display: block;">
+          <input matInput type="text" placeholder="Type your search" formControlName="search">
+    </mat-form-field>
+        <br>  
+    <div class="example-container mat-elevation-z8">
+        <mat-table #table [dataSource]="locationList">
+      
+          <ng-container matColumnDef="#">
+            <mat-header-cell *matHeaderCellDef> # </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.seqNo}} </mat-cell>
+          </ng-container>
+      
+          <ng-container matColumnDef="Location">
+            <mat-header-cell *matHeaderCellDef> Location </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.location}} </mat-cell>
+          </ng-container>
+      
+          <ng-container matColumnDef="Days">
+            <mat-header-cell *matHeaderCellDef> Days </mat-header-cell>
+            <mat-cell *matCellDef="let element"> {{element.days}} </mat-cell>
+          </ng-container>
+      
+          
+          <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+          <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+      </div>
+</div>
+

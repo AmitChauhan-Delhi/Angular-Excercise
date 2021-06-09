@@ -1,0 +1,32 @@
+mat-card-title {
+    //font-size: 72px;
+   // background: linear-gradient(to right,yellow, green);
+   // -webkit-text-fill-color: transparent;
+    font-weight: 600;
+  }
+
+  mat-card {
+    max-width: 600px;
+    margin: 2em auto;
+    text-align: center;
+    height: fit-content;
+    margin-top: 100px;
+  }
+
+  mat-card-content {
+    padding: 15px 30px 15px 30px;
+  }
+  
+  mat-form-field {
+    display: block;
+  }
+
+  .login-btn {
+    background-color: rgb(43, 255, 0);
+    color: #fff;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    display: block;
+  }

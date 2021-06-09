@@ -1,0 +1,27 @@
+<div style="background-color: azure;text-align: center;height: 100vh; margin: 0px 10px 10px 10px;display: flex;">
+
+  <mat-card>
+    <mat-card-content>
+      <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <h2 style="font-weight: 600;text-align-last: left;"><span style="color: chartreuse;">LOG INTO</span><span style="color: rgb(43, 255, 0);"> YOUR ACCOUNT</span></h2>
+        <mat-error *ngIf="loginInvalid">
+          The email and password were not recognized
+        </mat-error>
+        <mat-form-field class="full-width-input">
+          <input matInput type="email" placeholder="Email address" formControlName="username" required>
+          <mat-error>
+            Please provide a valid email address
+          </mat-error>
+        </mat-form-field>
+        <mat-form-field class="full-width-input">
+          <input matInput type="password" placeholder="Password" formControlName="password" required>
+          <mat-error>
+            Please provide a valid password
+          </mat-error>
+        </mat-form-field>
+        <button mat-raised-button class="login-btn">Login</button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>
+

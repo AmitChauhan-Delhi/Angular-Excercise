@@ -1,0 +1,45 @@
+<div class="detail-container">
+  <mat-tab-group [selectedIndex]="active" (selectedIndexChange)="onTabChange($event)">
+    <mat-tab label="Beginner"> 
+        <div class='md-padding' layout-wrap style="background-color: whitesmoke;display: -webkit-box; height: 100%;">
+
+
+            <mat-card *ngFor="let beg of beginnerTourList; let i = index">
+              
+              <mat-card-content>
+                <label class="c-text">{{beg.description}}</label>
+                <img src="{{getImage(beg.iconUrl)}}" class="mat-card-image" width="200" height="100" alt="user avatar">
+                <p>{{beg.longDescription}}</p>
+              </mat-card-content>
+              <div class="md-actions" layout="row" layout-align="end center">
+                <button mat-raised-button (click)="goToDetail(beg.id)">View Details</button>&nbsp;
+                <button mat-raised-button class="edit-btn" (click)="openDialog(beg, 'beg', i)">Edit</button>
+              </div>
+            </mat-card>
+        
+            
+        </div>
+    </mat-tab>
+    <mat-tab label="Advanced"> 
+        <div class='md-padding' layout-wrap style="background-color: whitesmoke;display: flex; height: 100%;">
+
+
+            <mat-card *ngFor="let adv of advancedTourList; let i = index">
+              
+              <mat-card-content>
+                <label class="c-text">{{adv.description}}</label>
+                <img src="{{getImage(adv.iconUrl)}}" class="mat-card-image"  width="200" height="100"  alt="user avatar">
+                <p>{{adv.longDescription}}</p>
+              </mat-card-content>
+              <div class="md-actions" layout="row" layout-align="end center">
+                <button mat-raised-button (click)="goToDetail(beg.id)">View Details</button>&nbsp;
+                <button mat-raised-button class="edit-btn" (click)="openDialog(adv, 'adv', i)">Edit</button>
+              </div>
+            </mat-card>
+            
+        </div>
+    </mat-tab>
+  </mat-tab-group>
+
+</div>
+
